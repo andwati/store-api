@@ -7,8 +7,13 @@ name = "pypi"
 django = "*"
 python-dotenv = "*"
 djangorestframework = "*"
+django-rest-swagger = "*"
+drf-yasg = "*"
 
 [dev-packages]
+black = "*"
+isort = "*"
+pre-commit = "*"
 
 [requires]
 python_version = "3.12"
