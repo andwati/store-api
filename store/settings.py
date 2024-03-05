@@ -17,7 +17,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-ENVIRONMENT = os.environ.get("ENVIRONMENT")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,36 +28,24 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if ENVIRONMENT == "production":
-    DEBUG = False
-    ALLOWED_HOSTS = ["*"]
-elif ENVIRONMENT == "development":
-    DEBUG = True
-    ALLOWED_HOSTS = []
 
-# Application definition
+DEBUG = True
+ALLOWED_HOSTS = []
 
-DJANGO_APPS = [
+
+INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-]
-
-THIRD_PARTY_APPS = [
     "rest_framework",
     "rest_framework_swagger",
     "drf_yasg",
+    "products",
+    "authentication",
 ]
-
-LOCAL_APPS = [
-    "products.apps.ProductsConfig",
-    "authentication.apps.AuthenticationConfig",
-]
-
-INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 # JWT settings
 JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY")
@@ -107,23 +94,14 @@ WSGI_APPLICATION = "store.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-if ENVIRONMENT == "development":
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
-        }
-    }
-elif ENVIRONMENT == "production":
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.postgresql",
-            "NAME": os.environ.get("DB_NAME"),
-            "USER": os.environ.get("DB_USER"),
-            "PASSWORD": os.environ.get("DB_PASSWORD"),
-            "HOST": os.environ.get("DB_HOST"),
-        }
-    }
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    },
+}
+
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
