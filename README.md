@@ -1,6 +1,10 @@
 # Store Inventory
 
 A store inventory API for backend technical assessment
+<p float="left">
+  <img src="./screenshots/ss1.png" width="400" />
+  <img src="./screenshots/ss2.png" width="400" />
+</p>
 
 ## Tech Stack
 
@@ -49,4 +53,4 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-This will spawn a local development server on [localhost:8000](localhost:8000). The swagger UI enables you to test the functionality directly in your browser without needing an external API client
+This will spawn a local development server on [localhost:8000](http://localhost:8000). The swagger UI enables you to test the functionality directly in your browser without needing an external API client
