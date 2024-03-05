@@ -63,6 +63,18 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 # JWT settings
 JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY")
 
+# Swagger ui settings
+SWAGGER_SETTINGS = {
+    "SECURITY_DEFINITIONS": {
+        "Auth Token [Bearer (JWT)]": {"type": "apiKey", "name": "Authorization", "in": "header"},
+    },
+}
+
+# Rest framework settings
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": ("authentication.backends.JWTAuthentication",),
+}
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
