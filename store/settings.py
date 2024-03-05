@@ -55,9 +55,13 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "products.apps.ProductsConfig",
+    "authentication.apps.AuthenticationConfig",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+
+# JWT settings
+JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY")
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

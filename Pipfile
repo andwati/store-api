@@ -7,8 +7,8 @@ name = "pypi"
 django = "*"
 python-dotenv = "*"
 djangorestframework = "*"
-django-rest-swagger = "*"
 drf-yasg = "*"
+pyjwt = "*"
 
 [dev-packages]
 black = "*"
