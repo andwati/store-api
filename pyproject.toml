@@ -8,6 +8,3 @@ target-version = ['py312']
 profile = "black"
 line_length = 119
 skip_glob = ["**/migrations/*.py"]
-
-[tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "store.settings"
