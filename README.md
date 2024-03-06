@@ -1,6 +1,6 @@
 # Store Inventory
 
-A store inventory API for backend technical assessment
+A store inventory API for backend technical assessment.
 <p float="left">
   <img src="./screenshots/ss1.png" width="400" />
   <img src="./screenshots/ss2.png" width="400" />
