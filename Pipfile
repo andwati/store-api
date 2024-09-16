@@ -9,6 +9,7 @@ python-dotenv = "*"
 djangorestframework = "*"
 drf-yasg = "*"
 pyjwt = "*"
+django-rest-swagger="*"
 
 [dev-packages]
 black = "*"
