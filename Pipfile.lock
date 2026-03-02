@@ -172,12 +172,12 @@
         },
         "drf-yasg": {
             "hashes": [
-                "sha256:68d62d5f7505611ba9577115c83b36211cc20d9748a50ce95a44abe411727d10",
-                "sha256:725ddda28aec7efc4cab985290fe790c8565e665017f7c80211d288a35821c70"
+                "sha256:7c7a7ab9feb0e13cdd6e25147d99adb0500a68bd96509ffd8f8cf7efd4bdc77e",
+                "sha256:ef86838c4ef10dcd3ac1ebf2be601cbe02978b999671caa43667f7c9db961468"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.9'",
-            "version": "==1.21.14"
+            "version": "==1.21.15"
         },
         "idna": {
             "hashes": [
